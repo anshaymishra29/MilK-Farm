@@ -59,7 +59,7 @@ public class CustomerController {
 			if(customer.getEmail().equals(cstmr.getEmail()) && customer.getPassword().equals(cstmr.getPassword())) {
 				model.addAttribute("allproduct", productServiceImpl.showAllProduct(product));
 				model.addAttribute("customer" , cstmr);
-				
+				model.addAttribute("success" , "Yor account has been created successfully, Kindly login to your account");
 				return "dashboard";
 			}
 		}

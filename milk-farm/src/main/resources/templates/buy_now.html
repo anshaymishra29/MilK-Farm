@@ -17,7 +17,7 @@
              <h5 class="card-text" th:text="${cart.quantity * cart.product_id.price + 'Rs'}"></h5>
              
             <form th:action="@{/order/{cart_id}/{customer_id}/{totalprice}(cart_id=${cart.cart_id}, customer_id=${cart.customer.customer_id}, totalprice=${totalprice})}" method="get">
-            <input class="form-control me-2" type="text" name="customer_address" placeholder="Enter delivery address"/>
+            <input class="form-control me-2" type="text" name="customer_address" placeholder="Enter delivery address" required/>
             <button type="submit" class="btn btn-warning">Confirm Order</button>
             </form>
         </div>

@@ -131,7 +131,7 @@
                 <p class="card-text" th:text="${product.product_description}"></p>
 
                 <form th:action="@{/addtocart/{product_id}/{customer_id}(product_id=${product.product_id},customer_id=${customer.customer_id})}" method="post">
-                  <input class="form-control me-2" type="number" name="quantity" placeholder="quantity.." />
+                  <input class="form-control me-2" type="number" name="quantity" placeholder="quantity.." required/>
                   <br>
                   <button type="submit" class="btn btn-grad">Add to cart..</button>
                 </form>

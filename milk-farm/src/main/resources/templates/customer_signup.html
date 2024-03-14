@@ -34,31 +34,30 @@
 
 
 <div class="container justify-content-center" style="margin: auto; margin-top: 50px; width: 50%; border: 3px; padding: 10px;  overflow-x: auto;">
-		
 		<form th:action="@{/createuser}" method="post">
 		  <div class="mb-3">
 		    <label for="exampleInputEmail1" class="form-label">First Name</label>
-		    <input type="text" class="form-control" name="firstName" id="exampleInputEmail1" aria-describedby="emailHelp">
+		    <input type="text" class="form-control" name="firstName" id="exampleInputEmail1" aria-describedby="emailHelp" required>
 		  </div>
 		  
 		  <div class="mb-3">
 		    <label for="exampleInputPassword1" class="form-label">Last Name</label>
-		    <input type="text" class="form-control" name="lastName" id="exampleInputPassword1">
+		    <input type="text" class="form-control" name="lastName" id="exampleInputPassword1" required>
 		  </div>
 		  
 		  <div class="mb-3">
 		    <label for="exampleInputEmail1" class="form-label">Contact no</label>
-		    <input type="number" class="form-control" name="phone" id="exampleInputEmail1" aria-describedby="emailHelp">
+		    <input type="number" class="form-control" name="phone" id="exampleInputEmail1" aria-describedby="emailHelp" required>
 		  </div>
 		  
 		  <div class="mb-3">
 		    <label for="exampleInputEmail1" class="form-label">Email</label>
-		    <input type="email" class="form-control" name="email" id="exampleInputEmail1" aria-describedby="emailHelp">
+		    <input type="email" class="form-control" name="email" id="exampleInputEmail1" aria-describedby="emailHelp" required>
 		  </div>
 		  
 		  <div class="mb-3">
 		    <label for="exampleInputPassword1" class="form-label">Password</label>
-		    <input type="password" class="form-control" name="password" id="exampleInputPassword1">
+		    <input type="password" class="form-control" name="password" id="exampleInputPassword1" required>
 		  </div>
 		  
 		  <button type="submit" class="btn btn-grad">Sign up</button>
