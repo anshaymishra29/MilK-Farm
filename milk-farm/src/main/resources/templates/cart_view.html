@@ -14,6 +14,17 @@
     .card {
       max-width: 740px;
     }
+    
+   
+         h4{
+              font-size: 25px;
+			  background: -webkit-linear-gradient(#eee, #333);
+			  -webkit-background-clip: text;
+			  -webkit-text-fill-color: transparent;
+			  margin-top: 12px;
+          
+         
+         }
   </style>
  
 </head>
@@ -26,28 +37,18 @@
 
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
-    <a class="navbar-brand" >Your cart</a>
+    <h4 class="navbar-brand" >Your cart</h4>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <form class="d-flex" role="search">
-        <h4 style="font-style : italic; padding-left : 1000px; padding-right : 30px; margin-left : auto;" class="justify-content-end" th:each="cart : ${cartitem}"  th:text="${cart.customer.firstName} + ${cart.customer.lastName}">Customer Name</h4>
+        <h4 style="font-style : italic; padding-left : 1000px; padding-right : 30px; margin-left : auto;" class="justify-content-end" th:each="cart : ${cartitem}"  th:text="${cart.customer.firstName}+'&nbsp' + ${cart.customer.lastName}">Customer Name</h4>
         <br>
       </form>
     </div>
   </div>
 </nav>
-
-
-
-
-
-
-
-
-
-
 
 
 <div class="container" style="margin: auto;

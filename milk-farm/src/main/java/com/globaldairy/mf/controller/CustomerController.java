@@ -49,7 +49,7 @@ public class CustomerController {
 	
 	
 //	Customer login
-	@PostMapping("/customerauth")
+	@PostMapping("/customerauth/dashboard")
 	public String handleCustomerLogin(@ModelAttribute Customer customer,Model model, Product product) {
 		
 		List<Customer> data = customerServiceImpl.customerAuth(customer);
@@ -166,5 +166,18 @@ public class CustomerController {
 		  model.addAttribute("orders" , orderServiceImpl.getOrdersByCustomerIt(customer_id));
 		  
 		  return "orders";
+	  }
+	  
+//	  Delete order
+	  @GetMapping("/cancelorder/{order_id}/{customer_id}")
+	  public String cancelOrder(@PathVariable("order_id") Integer order_id, 
+			  @PathVariable("customer_id") Integer customer_id,
+			  Model model) {
+		  System.out.println(order_id);
+		  System.out.println(customer_id);
+		  orderServiceImpl.deleteOrder(order_id);
+		  model.addAttribute("orders" , orderServiceImpl.getOrdersByCustomerIt(customer_id));
+		  return "orders";
+	 
 	  }
 }

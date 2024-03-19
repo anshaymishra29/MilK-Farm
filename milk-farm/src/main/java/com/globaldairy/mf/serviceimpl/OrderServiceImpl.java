@@ -34,4 +34,13 @@ public class OrderServiceImpl implements OrderService{
 		return orderRepository.getOrderByCustomerId(customer_id);
 	}
 
+
+
+	@Override
+	public void deleteOrder(Integer order_id) {
+		
+		 orderRepository.deleteById(order_id);
+		 
+	}
+
 }
