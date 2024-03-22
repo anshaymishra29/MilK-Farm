@@ -57,5 +57,22 @@ public class RequestController {
 	}
 	
 
+//	Handling about us page request
+	@GetMapping("/aboutus")
+	public String aboutUsPage() {
+		return "about_us";
+	}
+	
+//	Handling contact us page request
+	@GetMapping("/contactus")
+	public String contactUsPage() {
+		return "contact_us";
+	}
+	
+//	Handling contact us page request
+	@GetMapping("/home")
+	public String homePage() {
+		return "index";
+	}
 
 }

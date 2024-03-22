@@ -82,8 +82,28 @@
             text-decoration: none;
           }
          
-         
-         
+          h6 {
+    			text-transform: uppercase;
+				background: linear-gradient(to right, #30CFD0 0%, #330867 100%);
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+				font-size : 14px;
+				padding-left: 10px;
+		}
+
+		 h6:hover {
+		    color: #333;
+		}
+		         
+		 footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}        
  </style>
 </head>
 <body >
@@ -96,8 +116,14 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-     
-	 <a class="btn btn-btn" th:href="@{/index/admin}" style="margin-left:950px;">Admin Access</a>
+     <a th:href="@{/home}"><h6>Home</h6></a>
+     <br>
+     <a th:href="@{/aboutus}"><h6>About Us</h6></a>
+     <br>
+      <a th:href="@{/contactus}"><h6>Contact Us</h6></a>
+      
+      
+	 <a class="btn btn-btn" th:href="@{/index/admin}" style="margin-left:790px;">Admin Panel</a>
     </div>
   </div>
  
@@ -142,5 +168,9 @@
          
          
 	</div>
+	
+	 <footer>
+        <h5>&copy; 2024 Milk Farm. All rights reserved.</h5>
+    </footer>
 </body>
 </html>
